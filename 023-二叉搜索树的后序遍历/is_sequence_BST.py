@@ -20,4 +20,4 @@ def isSequenceOfBST(sequence):
         else:
             right.append(sequence[j])
         j += 1
-    return self.isSequenceOfBST(left) and self.isSequenceOfBST(right)
+    return isSequenceOfBST(left) and isSequenceOfBST(right)
