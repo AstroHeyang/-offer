@@ -19,3 +19,10 @@ def get_k_least_numbers(numbers, k):
         quick_sort(numbers, left+1, end)
     quick_sort(numbers, 0, len(numbers)-1)
     return numbers[:k]
+
+import heapq
+def get_k_least_numbers(numbers, k):
+    if not numbers or len(numbers) < k:
+        return []
+    heapq.heapify(numbers)
+    return heapq.nsmallest(k, numbers)
